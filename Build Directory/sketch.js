@@ -1,6 +1,8 @@
 function setup() {
-  createCanvas(1792, 768);
+  createCanvas(window.innerWidth, window.innerHeight);
 }
+
+window.addEventListener("resize", setup);
 
 function collidePointRect(px, py, rx1, ry1, rx2, ry2){
   if (px >= rx1 && px <= rx1 + Math.abs(rx1 - rx2) && py >= ry1 && py <= ry1 + Math.abs(ry1 - ry2)){
